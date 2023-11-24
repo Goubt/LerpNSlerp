@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://oclde5ixe0k"]
+
+[ext_resource type="Script" path="res://clipmap/clipmap.gd" id="1_gfwpg"]
+[ext_resource type="Shader" path="res://clipmap.gdshader" id="1_hopok"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v80po"]
+render_priority = 0
+shader = ExtResource("1_hopok")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6ke8j"]
+size = Vector2(32, 32)
+subdivide_width = 31
+subdivide_depth = 31
+
+[node name="Clipmap" type="Node3D"]
+script = ExtResource("1_gfwpg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0655689, 0, 0)
+material_override = SubResource("ShaderMaterial_v80po")
+mesh = SubResource("PlaneMesh_6ke8j")
+skeleton = NodePath("../..")

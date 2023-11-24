@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://croar0kebe37e"]
+[gd_scene load_steps=6 format=3 uid="uid://croar0kebe37e"]
 
+[ext_resource type="PackedScene" uid="uid://oclde5ixe0k" path="res://clipmap/clipmap.tscn" id="2_l2vjk"]
 [ext_resource type="PackedScene" uid="uid://bu3vtmwnoul1u" path="res://player/player_character.tscn" id="2_vccuw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ob5j3"]
@@ -25,4 +26,6 @@ transform = Transform3D(0.893058, 0, 0.449943, 0, 1, 0, -0.449943, 0, 0.893058, 
 shadow_enabled = true
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_vccuw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.0437, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.0929, 0)
+
+[node name="Clipmap" parent="." instance=ExtResource("2_l2vjk")]

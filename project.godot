@@ -51,3 +51,18 @@ crouch={
 [player]
 
 look_sensitivity=0.01
+
+[shader_globals]
+
+heightmap={
+"type": "sampler2D",
+"value": "res://heightmap/heightmap.png"
+}
+normalmap={
+"type": "sampler2D",
+"value": "res://heightmap/normalmap.png"
+}
+amplitude={
+"type": "float",
+"value": 0.0
+}
