@@ -8,11 +8,9 @@ Features - Randomly Renerated Terrain
          - Interactive Dashboard
 # Project Title
 
-Name:
+Name: LerpNSlerp
 
-Student Number: 
-
-Class Group:
+Student Number: C20402732
 
 Video:
 
