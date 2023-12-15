@@ -11,7 +11,7 @@ emission = Color(0, 1, 0, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o4fbc"]
 
 [node name="Bullet" type="CharacterBody3D"]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+transform = Transform3D(20, 0, 0, 0, 10, 0, 0, 0, 50, 0, 0, -0.0710144)
 script = ExtResource("1_otycd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -24,3 +24,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_74dn3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.4, 0, 0, 0, -2.62268e-08, -0.4, 0, 0.6, -1.74846e-08, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_o4fbc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

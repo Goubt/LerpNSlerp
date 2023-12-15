@@ -35,4 +35,4 @@ func _physics_process(delta):
 			var bullet = Bullet.instantiate()
 			main.add_child(bullet)
 			bullet.transform = i.global_transform
-			bullet.velocity = bullet.transform.basis.z * -300
+			bullet.velocity = bullet.transform.basis.z * -200
