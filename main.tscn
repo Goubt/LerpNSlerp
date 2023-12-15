@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://j8yt7f1iyd3j"]
+
+[ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
+[ext_resource type="PackedScene" uid="uid://bldjrvh5l3vsb" path="res://enemy.tscn" id="2_t0qgc"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_p43an")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 18.8238)
+
+[node name="Node3D2" parent="." instance=ExtResource("2_t0qgc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307598, 1.97917, -46.2485)

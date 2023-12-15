@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvgv2kbq4ob3i"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_0w157"]
+[ext_resource type="PackedScene" uid="uid://bg8y6qogyf65c" path="res://Blender Imports/player.gltf" id="1_tbxuf"]
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_0w157")
+
+[node name="player" parent="." instance=ExtResource("1_tbxuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
