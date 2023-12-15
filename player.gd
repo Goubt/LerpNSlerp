@@ -8,9 +8,8 @@ var inputVector = Vector3()
 @onready var main = get_tree().current_scene
 
 var Bullet = load("res://bullet.tscn")
-
-
 func _physics_process(delta):
+	
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputVector.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
 	inputVector = inputVector.normalized()
@@ -26,7 +25,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Restrict player to window
-	transform.origin.x = clamp(transform.origin.x, -15, 15)
+	transform.origin.x = clamp(transform.origin.x, -20, 20)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
 	#Pew Pew
