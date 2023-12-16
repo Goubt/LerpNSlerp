@@ -19,6 +19,8 @@ background_energy_multiplier = 0.21
 sky = SubResource("Sky_ad1fi")
 sky_custom_fov = 89.1
 sky_rotation = Vector3(0, 1.91637, 0)
+glow_enabled = true
+glow_bloom = 0.15
 
 [node name="Node3D" type="CharacterBody3D"]
 script = ExtResource("1_0w157")
@@ -44,4 +46,4 @@ texture = ExtResource("4_ntntp")
 environment = SubResource("Environment_cpjtf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.9102, 0, 22.0245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8145, 0, 13.6899)
