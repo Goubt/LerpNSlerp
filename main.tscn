@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://j8yt7f1iyd3j"]
+[gd_scene load_steps=9 format=3 uid="uid://j8yt7f1iyd3j"]
 
 [ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
 [ext_resource type="PackedScene" uid="uid://bkn5o8rpynbps" path="res://enemy_spawner.tscn" id="2_6hu7l"]
 [ext_resource type="AudioStream" uid="uid://bp70ty0bd8cbg" path="res://Sounds/explosion2.wav" id="3_jhox3"]
 [ext_resource type="AudioStream" uid="uid://x8j3y1on2ht0" path="res://Sounds/explosion.wav" id="3_lrlrk"]
 [ext_resource type="PackedScene" uid="uid://cird87d5tmmeg" path="res://star_particles.tscn" id="5_0xc5a"]
+[ext_resource type="FontFile" uid="uid://crsqx7oo8aarw" path="res://Fonts/ARCADE_I.TTF" id="6_2iruy"]
+[ext_resource type="Script" path="res://Score.gd" id="6_7rdvu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dlda4"]
+font = ExtResource("6_2iruy")
+font_size = 30
 
 [node name="Main" type="Node3D"]
 
@@ -27,3 +33,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -500)
 
 [node name="StarParticles" parent="." instance=ExtResource("5_0xc5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.9812)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 105.0
+offset_top = 60.0
+offset_right = 158.0
+offset_bottom = 83.0
+label_settings = SubResource("LabelSettings_dlda4")
+script = ExtResource("6_7rdvu")
