@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://6axir4xpfii7"]
+
+[ext_resource type="Script" path="res://Bullet.gd" id="1_otycd"]
+[ext_resource type="AudioStream" uid="uid://x8j3y1on2ht0" path="res://Sounds/explosion.wav" id="2_xwirm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_p8lay"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74dn3"]
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o4fbc"]
+
+[node name="Bullet" type="CharacterBody3D"]
+transform = Transform3D(20, 0, 0, 0, 10, 0, 0, 0, 50, 0, 0, -0.0710144)
+script = ExtResource("1_otycd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_p8lay")
+surface_material_override/0 = SubResource("StandardMaterial3D_74dn3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.4, 0, 0, 0, -2.62268e-08, -0.4, 0, 0.6, -1.74846e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_o4fbc")
+
+[node name="enemyHitSound" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_xwirm")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
