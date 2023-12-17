@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://j8yt7f1iyd3j"]
+[gd_scene load_steps=5 format=3 uid="uid://j8yt7f1iyd3j"]
 
 [ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
 [ext_resource type="PackedScene" uid="uid://bkn5o8rpynbps" path="res://enemy_spawner.tscn" id="2_6hu7l"]
+[ext_resource type="AudioStream" uid="uid://bp70ty0bd8cbg" path="res://Sounds/explosion2.wav" id="3_jhox3"]
+[ext_resource type="AudioStream" uid="uid://x8j3y1on2ht0" path="res://Sounds/explosion.wav" id="3_lrlrk"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Node3D" parent="." instance=ExtResource("1_p43an")]
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="Node3D"]
+process_mode = 3
+stream = ExtResource("3_jhox3")
+
+[node name="enemyHitSound" type="AudioStreamPlayer" parent="Node3D"]
+process_mode = 3
+stream = ExtResource("3_lrlrk")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 18.8238)

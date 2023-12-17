@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+@onready var shootSound: AudioStreamPlayer = $ShootSound
+@onready var enemyHit: AudioStreamPlayer = $enemyHitSound
+
 const MAXSPEED = 30
 const ACCELERATION = 0.75
 var inputVector = Vector3()
@@ -30,8 +33,9 @@ func _physics_process(delta):
 	
 	#Pew Pew
 	if Input.is_action_just_pressed("ui_accept"):
+		shootSound.play()
 		for i in guns:
 			var bullet = Bullet.instantiate()
 			main.add_child(bullet)
 			bullet.transform = i.global_transform
-			bullet.velocity = bullet.transform.basis.z * -200
+			bullet.velocity = bullet.transform.basis.z * -100

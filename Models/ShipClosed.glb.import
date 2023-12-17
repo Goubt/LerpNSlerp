@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cl2ds4qkqbvho"
-path="res://.godot/imported/enemy.gltf-fe1b1b8838abfaad83075fbb340dbfcb.scn"
+uid="uid://cfqrc8qoo8ykq"
+path="res://.godot/imported/ShipClosed.glb-0e4f9fe100736810c97109f44dcd18c1.scn"
 
 [deps]
 
-source_file="res://Blender Imports/enemy.gltf"
-dest_files=["res://.godot/imported/enemy.gltf-fe1b1b8838abfaad83075fbb340dbfcb.scn"]
+source_file="res://Models/ShipClosed.glb"
+dest_files=["res://.godot/imported/ShipClosed.glb-0e4f9fe100736810c97109f44dcd18c1.scn"]
 
 [params]
 
-nodes/root_type=""
-nodes/root_name=""
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
