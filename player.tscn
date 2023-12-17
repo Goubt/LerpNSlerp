@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvgv2kbq4ob3i"]
+[gd_scene load_steps=10 format=3 uid="uid://dvgv2kbq4ob3i"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0w157"]
 [ext_resource type="PackedScene" uid="uid://bg8y6qogyf65c" path="res://Blender Imports/player.gltf" id="1_tbxuf"]
@@ -22,11 +22,10 @@ sky_rotation = Vector3(0, 1.91637, 0)
 glow_enabled = true
 glow_bloom = 0.15
 
-[node name="Node3D" type="CharacterBody3D"]
-script = ExtResource("1_0w157")
+[sub_resource type="BoxShape3D" id="BoxShape3D_yv6hr"]
 
-[node name="player" parent="." instance=ExtResource("1_tbxuf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
+[node name="Node3D" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_0w157")
 
 [node name="Gun1" type="Node3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 3, 0, -1)
@@ -47,3 +46,12 @@ environment = SubResource("Environment_cpjtf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8145, 0, 13.6899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
+shape = SubResource("BoxShape3D_yv6hr")
+
+[node name="player" parent="CollisionShape3D" groups=["Player"] instance=ExtResource("1_tbxuf")]
+
+[node name="BulletInterval" type="Timer" parent="."]
+one_shot = true

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c21ncsc6odbn8"]
+
+[ext_resource type="Script" path="res://power_up.gd" id="1_l1g0e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_maemv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqao1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qilov"]
+shading_mode = 0
+
+[node name="Power-UP" type="CharacterBody3D"]
+script = ExtResource("1_l1g0e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_maemv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_jqao1")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qilov")
+
+[node name="Power-UP-Timer" type="Timer" parent="."]
+wait_time = 10.0

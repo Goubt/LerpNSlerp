@@ -7,10 +7,15 @@ const MAXSPEED = 30
 const ACCELERATION = 0.75
 var inputVector = Vector3()
 
+var can_fire = true
+
 @onready var guns = [$Gun1, $Gun2]
 @onready var main = get_tree().current_scene
 
+@onready var bullet_interval = get_node("BulletInterval")
+
 var Bullet = load("res://bullet.tscn")
+
 func _physics_process(delta):
 	
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -31,11 +36,28 @@ func _physics_process(delta):
 	transform.origin.x = clamp(transform.origin.x, -20, 20)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
-	#Pew Pew
-	if Input.is_action_just_pressed("ui_accept"):
-		shootSound.play()
-		for i in guns:
-			var bullet = Bullet.instantiate()
-			main.add_child(bullet)
-			bullet.transform = i.global_transform
-			bullet.velocity = bullet.transform.basis.z * -100
+	
+			
+	if Input.is_action_pressed("ui_accept") and can_fire:
+		shoot()
+		#Start interval timer
+		if Global.RapidFire == false:
+			can_fire = false
+			bullet_interval.start()
+		
+
+func _ready():
+	bullet_interval.timeout.connect(_on_timer_timeout)
+	
+func _on_timer_timeout():
+	can_fire = true
+	
+func shoot():
+	shootSound.play()
+	for i in guns:
+		var bullet = Bullet.instantiate()
+		main.add_child(bullet)
+		bullet.transform = i.global_transform
+		bullet.velocity = bullet.transform.basis.z * -100
+
+
