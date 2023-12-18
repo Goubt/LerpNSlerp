@@ -11,8 +11,11 @@ config_version=5
 [application]
 
 config/name="LerpNSlerp"
-run/main_scene="res://main.tscn"
+run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Fonts/file-chexL9ztDguspUXXMlZluVCQ.png"
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -22,4 +25,4 @@ Global="*res://Global.gd"
 [display]
 
 window/size/viewport_width=1920
-window/size/viewport_height=1280
+window/size/viewport_height=1080
