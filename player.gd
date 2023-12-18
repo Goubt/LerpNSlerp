@@ -37,7 +37,6 @@ func _physics_process(delta):
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
 	
-			
 	if Input.is_action_pressed("ui_accept") and can_fire:
 		shoot()
 		#Start interval timer

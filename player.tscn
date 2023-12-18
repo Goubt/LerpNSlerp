@@ -47,11 +47,12 @@ environment = SubResource("Environment_cpjtf")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8145, 0, 13.6899)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
 shape = SubResource("BoxShape3D_yv6hr")
 
-[node name="player" parent="CollisionShape3D" groups=["Player"] instance=ExtResource("1_tbxuf")]
+[node name="player" parent="CollisionShape3D" instance=ExtResource("1_tbxuf")]
 
 [node name="BulletInterval" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true

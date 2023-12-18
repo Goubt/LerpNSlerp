@@ -16,7 +16,7 @@ var enemySpacing = Vector3(4, 4, 0)
 
 var childNodes : Array
 
-var MAX_ENEMIES = 10
+var MAX_ENEMIES = 0
 
 
 # Called when the node enters the scene tree for the first time.

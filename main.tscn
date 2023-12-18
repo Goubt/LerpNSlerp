@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://j8yt7f1iyd3j"]
+[gd_scene load_steps=12 format=3 uid="uid://j8yt7f1iyd3j"]
 
 [ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
 [ext_resource type="PackedScene" uid="uid://bkn5o8rpynbps" path="res://enemy_spawner.tscn" id="2_6hu7l"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://Score.gd" id="6_7rdvu"]
 [ext_resource type="Script" path="res://Health.gd" id="8_ebctr"]
 [ext_resource type="PackedScene" uid="uid://fgep0qwukc3w" path="res://power_up_spawner.tscn" id="9_buk1n"]
-[ext_resource type="PackedScene" uid="uid://c21ncsc6odbn8" path="res://power_up.tscn" id="10_n8p8v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dlda4"]
 font = ExtResource("6_2iruy")
@@ -59,6 +58,3 @@ script = ExtResource("8_ebctr")
 
 [node name="Power-UP Spawner" parent="." instance=ExtResource("9_buk1n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49.9267)
-
-[node name="Power-UP" parent="." instance=ExtResource("10_n8p8v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -57.8082)

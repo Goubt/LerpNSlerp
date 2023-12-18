@@ -9,16 +9,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qilov"]
 shading_mode = 0
 
-[node name="Power-UP" type="CharacterBody3D"]
+[node name="Power-UP" type="CharacterBody3D" groups=["PowerUP"]]
 script = ExtResource("1_l1g0e")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["PowerUP"]]
 shape = SubResource("BoxShape3D_maemv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
 mesh = SubResource("BoxMesh_jqao1")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_qilov")
-
-[node name="Power-UP-Timer" type="Timer" parent="."]
-wait_time = 10.0

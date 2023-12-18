@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" path="res://power_up_spawner.gd" id="1_fubuh"]
 
-[node name="Power-UP Spawner" type="Node3D"]
+[node name="PowerUP_Spawner" type="Node3D"]
 script = ExtResource("1_fubuh")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="SpawnTime" type="Timer" parent="."]
+wait_time = 0.33
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="PUP_Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="SpawnTime" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
