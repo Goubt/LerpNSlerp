@@ -17,7 +17,9 @@ var Bullet = load("res://bullet.tscn")
 @onready var pup_timer : Timer = get_node("PUP_Timer")
 
 var power : String
-var powerList : Array = ["RapidFire"]
+var powerList : Array = ["RapidFire", "Health"]
+const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
+const MAX_HEALTH = 100  # Maximum health
 
 func _physics_process(delta):
 	transform.origin.z = 0
@@ -39,14 +41,12 @@ func _physics_process(delta):
 	transform.origin.x = clamp(transform.origin.x, -20, 20)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
-	
 	if Input.is_action_pressed("ui_accept") and can_fire:
 		shoot()
 		#Start interval timer
-		if Global.RapidFire == false:
+		if not Global.RapidFire:
 			can_fire = false
 			bullet_interval.start()
-		
 
 func _ready():
 	bullet_interval.timeout.connect(_on_timer_timeout)
@@ -63,16 +63,25 @@ func shoot():
 		bullet.transform = i.global_transform
 		bullet.velocity = bullet.transform.basis.z * -100
 		
-func choosePowerUP():
-	# Selects a random power up from list
-	power =  powerList[randi_range(0, len(powerList) -1)]
-	#Start Power-UP timer
+func receive_power_up(type: String):
+	match type:
+		"RapidFire":
+			activate_rapid_fire()
+		"Health":
+			increase_health()
+
+func activate_rapid_fire():
+	# Activate the rapid fire ability
+	Global.RapidFire = true
+	# Start the timer to deactivate the power-up after some time
 	pup_timer.start()
-	#Set Global attribute
-	Global.set(power, true)
-	#print(Global.RapidFire)
+
+func increase_health():
+	# Increase the player's health
+	Global.playerHealth = min(Global.playerHealth + HEALTH_POWERUP_AMOUNT, MAX_HEALTH)
 
 func _on_pup_timer_timeout():
-	Global.set(power, false)
-	#print(Global.RapidFire)
-
+	# Deactivate the rapid fire ability when the timer runs out
+	if Global.RapidFire:
+		Global.RapidFire = false
+		

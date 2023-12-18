@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci6j5wdy60ytn"]
+
+[ext_resource type="Script" path="res://power_up_health.gd" id="1_fd0d5"]
+[ext_resource type="PackedScene" uid="uid://cxgntyxt3ji21" path="res://Models/PowerUpHealth.gltf" id="2_m01tt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_maemv"]
+
+[node name="PowerUpHealth" type="CharacterBody3D" groups=["PowerUP"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_fd0d5")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" groups=["PowerUP"]]
+shape = SubResource("BoxShape3D_maemv")
+
+[node name="PowerUpHealth" parent="Area3D/CollisionShape3D" instance=ExtResource("2_m01tt")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered" flags=18]
