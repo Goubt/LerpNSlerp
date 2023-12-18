@@ -60,3 +60,5 @@ one_shot = true
 
 [node name="PUP_Timer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
