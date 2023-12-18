@@ -10,12 +10,17 @@
 shading_mode = 0
 
 [node name="Power-UP" type="CharacterBody3D" groups=["PowerUP"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("1_l1g0e")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["PowerUP"]]
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" groups=["PowerUP"]]
 shape = SubResource("BoxShape3D_maemv")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_jqao1")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_qilov")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

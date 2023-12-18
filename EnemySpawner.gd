@@ -13,10 +13,9 @@ var enemyGridSize = Vector2(5, 3)  # Adjust grid size as needed
 # Define the spacing between enemies in the grid
 var enemySpacing = Vector3(4, 4, 0)
 
-
 var childNodes : Array
 
-var MAX_ENEMIES = 0
+var MAX_ENEMIES = 30
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,10 +26,9 @@ func _ready():
 # Spawn enemies in a grid pattern
 func spawn_enemy_grid():
 	for i in range(enemyGridSize.x):
-		
 		var enemy = Enemy.instantiate()
 		main.add_child(enemy)
-		enemy.transform.origin = transform.origin + Vector3(i * enemySpacing.x, randf_range(-10, 10) ,randf_range(3, 3))
+		enemy.transform.origin = transform.origin + Vector3(i * enemySpacing.x, randf_range(-5, 5) ,randf_range(5, 5))
 
 func spawn():
 	var enemy = Enemy.instantiate()

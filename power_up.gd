@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var spd = 100
+var spd = 25
 #var spd = randf_range(20,50)
 var amplitude = 5  # Adjust as needed
 var frequency = 0.2  # Adjust as needed
@@ -21,4 +21,7 @@ func _physics_process(_delta):
 	if transform.origin.z > 100:
 		queue_free()
 
-
+func _on_area_3d_body_entered(body):
+	if body.is_in_group("Player"):
+		body.choosePowerUP()
+		queue_free()

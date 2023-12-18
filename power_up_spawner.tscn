@@ -6,11 +6,7 @@
 script = ExtResource("1_fubuh")
 
 [node name="SpawnTime" type="Timer" parent="."]
-wait_time = 0.33
+wait_time = 0.025
 autostart = true
 
-[node name="PUP_Timer" type="Timer" parent="."]
-wait_time = 10.0
-
 [connection signal="timeout" from="SpawnTime" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]

@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 @onready var main = get_tree().current_scene
 @onready var player = main.get_node("Node3D")	
-var spd = 100
-#var spd = randf_range(20,50)
+
+var spd = randf_range(20,40)
 var amplitude = 5  # Adjust as needed
 var frequency = 0.2  # Adjust as needed
 
