@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://buo1uhxlhg74d"]
+
+[ext_resource type="Script" path="res://power_up_rapid_fire.gd" id="1_fj2fh"]
+[ext_resource type="PackedScene" path="res://Models/PowerUpRapidFire.gltf" id="2_dabfk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_maemv"]
+
+[node name="Power-Up-Rapid-Fire" type="CharacterBody3D" groups=["PowerUP"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_fj2fh")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" groups=["PowerUP"]]
+shape = SubResource("BoxShape3D_maemv")
+
+[node name="PowerUpRapidFire" parent="Area3D/CollisionShape3D" instance=ExtResource("2_dabfk")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered" flags=18]

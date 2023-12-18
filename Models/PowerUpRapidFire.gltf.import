@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dgikk4smc6erj"
-path="res://.godot/imported/PowerUp1.gltf-c713b0e5d19020d6cb7fcb3f888013c0.scn"
+path="res://.godot/imported/PowerUpRapidFire.gltf-05a537d9d7c594407d4a041c1f0b395f.scn"
 
 [deps]
 
-source_file="res://Models/PowerUp1.gltf"
-dest_files=["res://.godot/imported/PowerUp1.gltf-c713b0e5d19020d6cb7fcb3f888013c0.scn"]
+source_file="res://Models/PowerUpRapidFire.gltf"
+dest_files=["res://.godot/imported/PowerUpRapidFire.gltf-05a537d9d7c594407d4a041c1f0b395f.scn"]
 
 [params]
 
