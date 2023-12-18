@@ -21,6 +21,7 @@ font_size = 30
 [node name="Main" type="Node3D"]
 
 [node name="Node3D" parent="." instance=ExtResource("1_p43an")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0196019, 0, 0.0142946)
 
 [node name="ShootSound" type="AudioStreamPlayer" parent="Node3D"]
 process_mode = 3
