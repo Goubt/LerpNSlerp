@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_0w157"]
 [ext_resource type="Texture2D" uid="uid://dc6dcxi3873h8" path="res://crosshair1.png" id="3_mb61l"]
-[ext_resource type="Texture2D" uid="uid://ch3fv2ljmwiy4" path="res://space-galaxy-background.jpg" id="3_slg06"]
+[ext_resource type="Texture2D" uid="uid://br81ct6ckr4em" path="res://Images/SpaceImage.png" id="4_fespy"]
 [ext_resource type="Texture2D" uid="uid://byi6bd5m15rd8" path="res://pngaaa.com-910605.png" id="4_ntntp"]
 [ext_resource type="PackedScene" uid="uid://bq5bhqfi5760b" path="res://Models/ShipModel.gltf" id="5_y2x22"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pwlvm"]
-panorama = ExtResource("3_slg06")
+panorama = ExtResource("4_fespy")
 
 [sub_resource type="Sky" id="Sky_ad1fi"]
 sky_material = SubResource("PanoramaSkyMaterial_pwlvm")
@@ -15,10 +15,10 @@ radiance_size = 4
 
 [sub_resource type="Environment" id="Environment_cpjtf"]
 background_mode = 2
-background_energy_multiplier = 0.21
+background_energy_multiplier = 0.33
 sky = SubResource("Sky_ad1fi")
-sky_custom_fov = 89.1
-sky_rotation = Vector3(0, 1.91637, 0)
+sky_custom_fov = 83.4
+sky_rotation = Vector3(3.48787e-16, -4.69144, -0.670206)
 glow_enabled = true
 glow_bloom = 0.15
 
