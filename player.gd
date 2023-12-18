@@ -1,15 +1,26 @@
 extends CharacterBody3D
 
+@onready var shootSound: AudioStreamPlayer = $ShootSound
+@onready var enemyHit: AudioStreamPlayer = $enemyHitSound
+
 const MAXSPEED = 30
 const ACCELERATION = 0.75
 var inputVector = Vector3()
 
+var can_fire = true
+
 @onready var guns = [$Gun1, $Gun2]
 @onready var main = get_tree().current_scene
-
 var Bullet = load("res://bullet.tscn")
+
+@onready var bullet_interval = get_node("BulletInterval")
+@onready var pup_timer : Timer = get_node("PUP_Timer")
+
+var power : String
+var powerList : Array = ["RapidFire"]
+
 func _physics_process(delta):
-	
+	transform.origin.z = 0
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputVector.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
 	inputVector = inputVector.normalized()
@@ -28,10 +39,40 @@ func _physics_process(delta):
 	transform.origin.x = clamp(transform.origin.x, -20, 20)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
-	#Pew Pew
-	if Input.is_action_just_pressed("ui_accept"):
-		for i in guns:
-			var bullet = Bullet.instantiate()
-			main.add_child(bullet)
-			bullet.transform = i.global_transform
-			bullet.velocity = bullet.transform.basis.z * -200
+	
+	if Input.is_action_pressed("ui_accept") and can_fire:
+		shoot()
+		#Start interval timer
+		if Global.RapidFire == false:
+			can_fire = false
+			bullet_interval.start()
+		
+
+func _ready():
+	bullet_interval.timeout.connect(_on_timer_timeout)
+	pup_timer.timeout.connect(_on_pup_timer_timeout)
+	
+func _on_timer_timeout():
+	can_fire = true
+	
+func shoot():
+	shootSound.play()
+	for i in guns:
+		var bullet = Bullet.instantiate()
+		main.add_child(bullet)
+		bullet.transform = i.global_transform
+		bullet.velocity = bullet.transform.basis.z * -100
+		
+func choosePowerUP():
+	# Selects a random power up from list
+	power =  powerList[randi_range(0, len(powerList) -1)]
+	#Start Power-UP timer
+	pup_timer.start()
+	#Set Global attribute
+	Global.set(power, true)
+	#print(Global.RapidFire)
+
+func _on_pup_timer_timeout():
+	Global.set(power, false)
+	#print(Global.RapidFire)
+
