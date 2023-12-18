@@ -52,7 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
 shape = SubResource("BoxShape3D_yv6hr")
 
 [node name="ShipModel" parent="CollisionShape3D" instance=ExtResource("5_y2x22")]
-transform = Transform3D(-0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, -0.107237, -1.81414, -1.26167)
+transform = Transform3D(-0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, 0, -1.814, 0)
 
 [node name="BulletInterval" type="Timer" parent="."]
 wait_time = 0.5
@@ -62,3 +62,4 @@ one_shot = true
 wait_time = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.78215)
