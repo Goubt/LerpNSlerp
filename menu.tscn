@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dox7cpm0jks1x"]
+[gd_scene load_steps=3 format=3 uid="uid://dox7cpm0jks1x"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_kjb8m"]
+[ext_resource type="FontFile" uid="uid://crsqx7oo8aarw" path="res://Fonts/ARCADE_I.TTF" id="2_v26hf"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -23,12 +24,19 @@ grow_vertical = 0
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 80)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.854902, 0.764706, 0.0627451, 0.87451)
+theme_override_colors/font_focus_color = Color(0.976471, 0.976471, 0.976471, 1)
+theme_override_fonts/font = ExtResource("2_v26hf")
+theme_override_font_sizes/font_size = 38
 text = "Start Game
 "
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 80)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.854902, 0.764706, 0.0627451, 0.87451)
+theme_override_fonts/font = ExtResource("2_v26hf")
+theme_override_font_sizes/font_size = 38
 text = "Quit to Desktop
 "
 
