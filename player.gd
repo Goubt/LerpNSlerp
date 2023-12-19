@@ -38,7 +38,7 @@ func _physics_process(delta):
 	# Set rotation for floaty spacey feel
 	rotation_degrees.z = velocity.x * -2
 	rotation_degrees.x = velocity.y / 2
-	rotation_degrees.y = -velocity.x /2
+	rotation_degrees.y = -velocity.x / 2
 	
 	move_and_slide()
 	

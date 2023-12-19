@@ -22,7 +22,7 @@ func _physics_process(_delta):
 	if transform.origin.z > 100:
 		queue_free()
 
-unc _on_PowerUp_body_entered(body: Node):
+func _on_PowerUp_body_entered(body: Node):
 	if body.is_in_group("Player"):
 		body.receive_power_up("Health")
 		queue_free()  # Remove the power-up after it's picked up
