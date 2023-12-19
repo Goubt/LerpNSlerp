@@ -52,7 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0219556, 0, -0.0898371)
 shape = SubResource("BoxShape3D_yv6hr")
 
 [node name="ShipModel" parent="CollisionShape3D" instance=ExtResource("5_y2x22")]
-transform = Transform3D(-0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, 2.08165e-12, -1.814, -1.262)
+transform = Transform3D(-0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, 0, -1.814, -1.262)
 
 [node name="BulletInterval" type="Timer" parent="."]
 wait_time = 0.5
