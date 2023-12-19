@@ -22,6 +22,11 @@ const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
 const MAX_HEALTH = 100  # Maximum health
 
 func _physics_process(delta):
+	
+	if Global.playerHealth == 0:
+		print("Dead")
+		get_tree().change_scene_to_file("res://GameOver.tscn")
+		
 	transform.origin.z = 0
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputVector.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
@@ -38,8 +43,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Restrict player to window
-	transform.origin.x = clamp(transform.origin.x, -20, 20)
-	transform.origin.y = clamp(transform.origin.y, -10, 10)
+	#transform.origin.x = clamp(transform.origin.x, -20, 20)
+	#transform.origin.y = clamp(transform.origin.y, -10, 10)
 	
 	if Input.is_action_pressed("ui_accept") and can_fire:
 		shoot()

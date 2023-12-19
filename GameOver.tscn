@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl74vga0fbavk"]
+
+[ext_resource type="Texture2D" uid="uid://ch3fv2ljmwiy4" path="res://space-galaxy-background.jpg" id="1_0g830"]
+[ext_resource type="FontFile" uid="uid://crsqx7oo8aarw" path="res://Fonts/ARCADE_I.TTF" id="1_wqqwy"]
+[ext_resource type="Script" path="res://GameOver.gd" id="1_x4s1b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4s1b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -370.0
+offset_top = -636.0
+offset_right = 4630.0
+offset_bottom = 2697.0
+texture = ExtResource("1_0g830")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -7.0
+offset_top = 192.0
+offset_right = -1542.0
+offset_bottom = 218.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0.937255, 0.686275, 0, 1)
+theme_override_fonts/font = ExtResource("1_wqqwy")
+text = "GAME OVER!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -10.0
+offset_right = 4.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 60)
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+theme_override_colors/font_color = Color(0, 0.509804, 0, 1)
+theme_override_fonts/font = ExtResource("1_wqqwy")
+text = "Try Again
+"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../RestartButton")
+theme_override_colors/font_color = Color(0, 0.509804, 0, 1)
+theme_override_fonts/font = ExtResource("1_wqqwy")
+text = "Exit Game
+"
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

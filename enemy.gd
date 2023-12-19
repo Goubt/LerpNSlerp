@@ -3,20 +3,33 @@ extends CharacterBody3D
 @onready var main = get_tree().current_scene
 @onready var player = main.get_node("Node3D")	
 
-var spd = randf_range(20,40)
+var spd = randf_range(10,30)
 var amplitude = 5  # Adjust as needed
 var frequency = 0.2  # Adjust as needed
+var direction = 1
 
 func _physics_process(delta):
 	
 	playerCollision()
-			
-	velocity.x = amplitude * sin(frequency * transform.origin.y)
+	
+	# Move to the right or left continuously
+	velocity.x = spd * direction
 	velocity.z = spd
+
+	# Change direction when hitting the right or left limit of the screen
+	if transform.origin.x >= 100:
+		direction = -1			
+		
+	if transform.origin.x <= -100:
+		direction = 1
+	#velocity.x = amplitude * sin(frequency * transform.origin.y)
+	#velocity.z = spd * direction
 	move_and_slide()
+
 	
 	#remove the enemy when they get behind the player
 	if transform.origin.z > 10:
+		Global.playerHealth -= 1
 		queue_free()
 		
 	
