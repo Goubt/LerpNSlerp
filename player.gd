@@ -48,8 +48,8 @@ func _physics_process(delta):
 	
 	pup_progress.value = pup_timer.time_left
 	#Restrict player to window
-	#transform.origin.x = clamp(transform.origin.x, -20, 20)
-	#transform.origin.y = clamp(transform.origin.y, -10, 10)
+	transform.origin.x = clamp(transform.origin.x, -200, 200)
+	transform.origin.y = clamp(transform.origin.y, -100, 100)
 	
 	if Input.is_action_pressed("ui_accept") and can_fire:
 		shoot()

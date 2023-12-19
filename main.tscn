@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j8yt7f1iyd3j"]
+[gd_scene load_steps=13 format=3 uid="uid://j8yt7f1iyd3j"]
 
 [ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
 [ext_resource type="PackedScene" uid="uid://bkn5o8rpynbps" path="res://enemy_spawner.tscn" id="2_6hu7l"]
@@ -9,6 +9,27 @@
 [ext_resource type="Script" path="res://Score.gd" id="6_7rdvu"]
 [ext_resource type="Script" path="res://Health.gd" id="8_ebctr"]
 [ext_resource type="PackedScene" uid="uid://fgep0qwukc3w" path="res://power_up_spawner.tscn" id="9_buk1n"]
+
+[sub_resource type="GDScript" id="GDScript_bb7f0"]
+script/source = "extends Camera3D
+
+var follow_speed = 5.0
+var offset = Vector3(0, 5, 20)  # Adjust the offset as needed
+
+# This assumes that the player scene is instanced under a node named 'PlayerInstance' in 'Main'
+var ship_model_path = \"../Node3D\"
+
+func _ready():
+	# Update the path if necessary when the scene is ready
+	ship_model_path = \"../Node3D\"
+
+func _process(delta):
+	var ship_model = get_node_or_null(ship_model_path)
+	if ship_model:
+		var target_position = ship_model.global_transform.origin + offset
+		# Correct method call to interpolate between vectors
+		global_transform.origin = global_transform.origin.lerp(target_position, follow_speed * delta)
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_dlda4"]
 font = ExtResource("6_2iruy")
@@ -35,6 +56,7 @@ stream = ExtResource("3_lrlrk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 18.118)
 fov = 100.0
 far = 500.0
+script = SubResource("GDScript_bb7f0")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("2_6hu7l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -500)
