@@ -24,6 +24,8 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 - Press F5 at any time to change camera perspective when in PC Mode
 - Use Arrow Keys to Control your Ship
 - Press Space to Fire
+- Collect powerups to help you along the way
+- Avoid letting invaders past you
 
 
 # How it works
