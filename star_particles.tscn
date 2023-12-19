@@ -9,13 +9,15 @@ emission_sphere_radius = 18.0
 direction = Vector3(0, 1, 0)
 spread = 0.0
 gravity = Vector3(0, 0, 0)
-initial_velocity_min = 200.0
+initial_velocity_min = 150.0
 initial_velocity_max = 200.0
+angular_velocity_min = -720.0
+angular_velocity_max = 38.92
 angle_max = 467.0
 hue_variation_max = 1.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d5c1t"]
-radius = 0.005
+radius = 0.02
 height = 10.0
 
 [node name="StarParticles" type="Node3D"]
