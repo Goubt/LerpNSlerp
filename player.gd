@@ -16,6 +16,9 @@ var Bullet = load("res://bullet.tscn")
 @onready var bullet_interval = get_node("BulletInterval")
 @onready var pup_timer : Timer = get_node("PUP_Timer")
 
+@onready var third_person_camera = get_node("/root/Main/ThirdPersonCam")
+@onready var first_person_camera = $FirstPersonCam
+
 var power : String
 var powerList : Array = ["RapidFire", "Health"]
 const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
@@ -90,3 +93,14 @@ func _on_pup_timer_timeout():
 	if Global.RapidFire:
 		Global.RapidFire = false
 		
+		
+# Reference to the cameras
+func _process(delta):
+	if Input.is_action_just_pressed("switch_camera"):
+		switch_camera()
+
+func switch_camera():
+	if third_person_camera.is_current():
+		first_person_camera.make_current()
+	else:
+		third_person_camera.make_current()
