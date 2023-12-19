@@ -24,11 +24,41 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 
 # List of classes/assets in the project
 
-| Class/asset | Source |
-|-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+# List of classes/assets in the project
+
+| Class/asset                | Source       |
+|----------------------------|--------------|
+| Invader.gd                 | Self written |
+| Bullet.gd                  | Self written |
+| bullet.tscn                | Self written |
+| Enemy.gd                   | Self written |
+| enemy.tscn                 | Self written |
+| EnemySpawner.gd            | Self written |
+| enemy_spawner.tscn         | Self written |
+| ExplosionParticle.tscn     | Self written |
+| GameOver.gd                | Self written |
+| GameOver.tscn              | Self written |
+| Global.gd                  | Self written |
+| Health.gd                  | Self written |
+| main.gd                    | Self written |
+| main.tscn                  | Self written |
+| menu.gd                    | Self written |
+| menu.tscn                  | Self written |
+| Message.gd                 | Self written |
+| player.gd                  | Self written |
+| player.tscn                | Self written |
+| power_up.gd                | Self written |
+| power_up.tscn              | Self written |
+| power_up_health.tscn       | Self written |
+| power_up_rapid_fire.tscn   | Self written |
+| PowerUpSpawner.gd          | Self written |
+| power_up_spawner.tscn      | Self written |
+| ProgressBar.tscn           | Self written |
+| Score.gd                   | Self written |
+| SpaceParticles.tscn        | Self written |
+| star_particle.tscn         | Self written |
+| ThirdPersonCamera.gd       | Self written |
+
 
 # List of Images used in the project
 | Image | Use Case | Source |
