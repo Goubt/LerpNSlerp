@@ -30,12 +30,31 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 | MyClass1.cs | Modified from [reference]() |
 | MyClass2.cs | From [reference]() |
 
+# List of Images used in the project
+| Image | Use Case | Source |
+|-----------|-----------|-----------|
+| br.png | BackGround | AI Generated |
+| GameOver.png | Game Over Screen | AI Generated |
+| SpaceImage.png | Alternative Background | AI Generated |
+| TitleScreen.png | Title Screen Image | AI Generated |
+| ShipModel | Control Panel mapping | https://images-assets.nasa.gov/image/KSC-99pp0441/KSC-99pp0441~orig.jpg |
+
+# List of Models used in the project
+| Models | Use Case | Source |
+|-----------|-----------|-----------|
+| ShipModel.gltf | Model used for the space ship | Self-Made |
+| Invader.gltf | Model for the Alien | From [https://free3d.com/3d-model/space-invader-26504.html] |
+| InvaderAlt.gltf | Potentional for animated Alien | Modifier from [https://free3d.com/3d-model/space-invader-26504.html] |
+| PowerUpHealth.gltf | Model for the Health Power Up | Self-Made |
+| PowerUpRapidFire.gltf | Model for the Rapid Fire Power Up | Self-Made |
+
 # References
 * Item 1
 * Item 2
 
 # What I am most proud of in the assignment
-
+Aleksey:
+Learning how to use blender, learning how to properly use modifiers and 
 # What I learned
 
 # Proposal submitted earlier can go here:
