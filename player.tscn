@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvgv2kbq4ob3i"]
+[gd_scene load_steps=11 format=3 uid="uid://dvgv2kbq4ob3i"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0w157"]
 [ext_resource type="Texture2D" uid="uid://dc6dcxi3873h8" path="res://crosshair1.png" id="3_mb61l"]
 [ext_resource type="Texture2D" uid="uid://br81ct6ckr4em" path="res://Images/SpaceImage.png" id="4_fespy"]
 [ext_resource type="Texture2D" uid="uid://byi6bd5m15rd8" path="res://pngaaa.com-910605.png" id="4_ntntp"]
 [ext_resource type="PackedScene" uid="uid://bq5bhqfi5760b" path="res://Models/ShipModel.gltf" id="5_y2x22"]
+[ext_resource type="PackedScene" uid="uid://cird87d5tmmeg" path="res://star_particles.tscn" id="6_xny3r"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pwlvm"]
 panorama = ExtResource("4_fespy")
@@ -72,5 +73,8 @@ offset_bottom = 1057.0
 show_percentage = false
 
 [node name="FirstPersonCam" type="Camera3D" parent="."]
+
+[node name="StarParticles" parent="." instance=ExtResource("6_xny3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.9812)
 
 [connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
