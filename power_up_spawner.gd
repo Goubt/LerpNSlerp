@@ -31,5 +31,5 @@ func spawn_power_up():
 	power_up_instance.transform.origin = transform.origin + Vector3(randf_range(-5, 5), randf_range(-5, 5), 0)
 
 func _on_timer_timeout():
-	if randi_range(1, 10) == 1:
+	if randi_range(1, 300) == 1:
 		spawn_power_up()
