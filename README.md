@@ -98,8 +98,9 @@ Are you up for the task?
 Space Invaders - Inspiration for game mechanics.
 Galaga - Inspiration for enemy designs.
 Centipede - Inspiration for power-up system.
+
 # What I am most proud of in the assignment
-# What I am most proud of in the assignment
+
 Aleksey:
 "Making all the models that are used in the project, apart from the space invader, however it is still modified to fit our thematic and textured to suit."
 
@@ -107,6 +108,8 @@ What I learned
 Aleksey:
 "This project allowed mt to learn the basics of games design and go through the process of creating models to be used. Learning how to use blender would help me with my final year project, as it is to create 3D models."
 
+Jamie:
+Learning the intricacies of game development, how different scenes and nodes interact with one another and the complexities that come along with creating a game that runs efficiently and is fun to play
 
 
 ## This is how to markdown text:
