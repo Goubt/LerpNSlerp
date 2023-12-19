@@ -11,12 +11,13 @@ var enemySpacing = Vector3(0, 0, 4)
 
 var childNodes : Array
 
-var MAX_ENEMIES = 10 + (0.5 * Global.score)
+var MAX_ENEMIES : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Spawn enemies in a snake-like pattern
 	spawn_snake()
+	
 
 # Spawn enemies in a snake-like pattern
 func spawn_snake():
@@ -44,6 +45,8 @@ func count_enemies():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print("Max Enemies: ", MAX_ENEMIES)
+	MAX_ENEMIES = 10 + (0.5 * Global.score)
 	pass
 
 func _on_timer_timeout():
