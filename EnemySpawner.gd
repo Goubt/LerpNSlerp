@@ -25,7 +25,7 @@ func spawn_snake():
 		main.add_child(enemy)
 		enemy.transform.origin = transform.origin + Vector3(0, randf_range(-10, 10), -count_enemies() * enemySpacing.z - i * 5)
 
-func spawn():
+func spawn_single():
 	var enemy = Enemy.instantiate()
 	main.add_child(enemy)
 	enemy.transform.origin = transform.origin + Vector3(randf_range(-15, 15), randf_range(-10, 10), 0)

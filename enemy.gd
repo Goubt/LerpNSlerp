@@ -17,10 +17,10 @@ func _physics_process(delta):
 	velocity.z = spd
 
 	# Change direction when hitting the right or left limit of the screen
-	if transform.origin.x >= 150:
+	if transform.origin.x >= 100:
 		direction = -1			
 		
-	if transform.origin.x <= -150:
+	if transform.origin.x <= -100:
 		direction = 1
 	#velocity.x = amplitude * sin(frequency * transform.origin.y)
 	#velocity.z = spd * direction
