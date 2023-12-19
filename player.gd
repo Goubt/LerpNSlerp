@@ -21,7 +21,7 @@ var Bullet = load("res://bullet.tscn")
 
 var power : String
 var powerList : Array = ["RapidFire", "Health"]
-const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
+const HEALTH_POWERUP_AMOUNT = 1  # The amount of health to restore
 const MAX_HEALTH = 100  # Maximum health
 
 func _physics_process(delta):
@@ -41,8 +41,13 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Restrict player to window
+<<<<<<< Updated upstream
 	transform.origin.x = clamp(transform.origin.x, -20, 20)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
+=======
+	transform.origin.x = clamp(transform.origin.x, -200, 200)
+	transform.origin.y = clamp(transform.origin.y, -100, 100)
+>>>>>>> Stashed changes
 	
 	if Input.is_action_pressed("ui_accept") and can_fire:
 		shoot()
