@@ -73,4 +73,10 @@ show_percentage = false
 
 [node name="FirstPersonCam" type="Camera3D" parent="."]
 
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.934103, 0)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.925025, 0)
+
 [connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
