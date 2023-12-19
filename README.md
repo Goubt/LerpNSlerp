@@ -24,8 +24,6 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 
 # List of classes/assets in the project
 
-# List of classes/assets in the project
-
 | Class/asset                | Source       |
 |----------------------------|--------------|
 | Invader.gd                 | Self written |
