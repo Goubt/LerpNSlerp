@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvgv2kbq4ob3i"]
+[gd_scene load_steps=14 format=3 uid="uid://dvgv2kbq4ob3i"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0w157"]
 [ext_resource type="Texture2D" uid="uid://dc6dcxi3873h8" path="res://crosshair1.png" id="3_mb61l"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dfu0u8c26wkaf" path="res://Images/br2.png" id="4_we7mg"]
 [ext_resource type="PackedScene" uid="uid://bq5bhqfi5760b" path="res://Models/ShipModel.gltf" id="5_y2x22"]
 [ext_resource type="PackedScene" uid="uid://cird87d5tmmeg" path="res://star_particles.tscn" id="6_xny3r"]
+[ext_resource type="FontFile" uid="uid://crsqx7oo8aarw" path="res://Fonts/ARCADE_I.TTF" id="7_n8os0"]
+[ext_resource type="Script" path="res://Message.gd" id="7_syteg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pwlvm"]
 panorama = ExtResource("4_we7mg")
@@ -24,6 +26,10 @@ glow_enabled = true
 glow_bloom = 0.15
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yv6hr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_upuga"]
+font = ExtResource("7_n8os0")
+font_size = 50
 
 [node name="Node3D2" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_0w157")
@@ -67,5 +73,24 @@ wait_time = 10.0
 [node name="StarParticles" parent="." instance=ExtResource("6_xny3r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.9812)
 
-[connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
+[node name="PowerUP_Progress" type="ProgressBar" parent="."]
+offset_left = 793.0
+offset_top = 1046.0
+offset_right = 1169.0
+offset_bottom = 1075.0
+show_percentage = false
 
+[node name="Message" type="Label" parent="."]
+offset_left = 879.0
+offset_top = 527.0
+offset_right = 1088.0
+offset_bottom = 636.0
+scale = Vector2(0.985752, 1)
+label_settings = SubResource("LabelSettings_upuga")
+script = ExtResource("7_syteg")
+
+[node name="MessageTimer" type="Timer" parent="Message"]
+one_shot = true
+
+[connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
+[connection signal="timeout" from="Message/MessageTimer" to="Message" method="_on_timer_timeout"]

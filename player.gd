@@ -22,6 +22,8 @@ var Bullet = load("res://bullet.tscn")
 @onready var third_person_camera = get_node("/root/Main/ThirdPersonCam")
 @onready var first_person_camera = $FirstPersonCam
 
+@onready var message = get_node("Message")
+
 var power : String
 var powerList : Array = ["RapidFire", "Health"]
 const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
@@ -80,9 +82,8 @@ func shoot():
 func receive_power_up(type: String):
 	powerUp.play()
 	match type:
-		
 		"RapidFire":
-			print("rapid fire")
+			message.print_message("Rapid Fire")
 			activate_rapid_fire()
 		"Health":
 			increase_health()
