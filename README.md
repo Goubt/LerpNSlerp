@@ -52,12 +52,21 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 * Item 1
 * Item 2
 
-# What I am most proud of in the assignment
-Aleksey:
-Learning how to use blender, learning how to properly use modifiers and 
 # What I learned
 
 # Proposal submitted earlier can go here:
+
+# References
+Space Invaders - Inspiration for game mechanics.
+Galaga - Inspiration for enemy designs.
+Centipede - Inspiration for power-up system.
+# What I am most proud of in the assignment
+Aleksey:
+"Learning how to use Blender, understanding how to properly use modifiers and integrate 3D models into a game environment."
+
+What I learned
+[Discuss any new skills, techniques, or insights you've gained through this project.]
+
 
 ## This is how to markdown text:
 
