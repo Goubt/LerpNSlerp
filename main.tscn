@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://j8yt7f1iyd3j"]
+[gd_scene load_steps=13 format=3 uid="uid://j8yt7f1iyd3j"]
 
 [ext_resource type="PackedScene" uid="uid://dvgv2kbq4ob3i" path="res://player.tscn" id="1_p43an"]
 [ext_resource type="PackedScene" uid="uid://bkn5o8rpynbps" path="res://enemy_spawner.tscn" id="2_6hu7l"]
 [ext_resource type="AudioStream" uid="uid://dljbfkdrhgq7k" path="res://Sounds/BlasterSound.mp3" id="2_iyrat"]
 [ext_resource type="AudioStream" uid="uid://8gsq4msk0ydr" path="res://Sounds/EnemyHitSound.wav" id="3_0si81"]
+[ext_resource type="AudioStream" uid="uid://yaqtta3x8qgi" path="res://Sounds/PowerUpSound.wav" id="4_t0qab"]
 [ext_resource type="PackedScene" uid="uid://cird87d5tmmeg" path="res://star_particles.tscn" id="5_0xc5a"]
 [ext_resource type="FontFile" uid="uid://crsqx7oo8aarw" path="res://Fonts/ARCADE_I.TTF" id="6_2iruy"]
 [ext_resource type="Script" path="res://Score.gd" id="6_7rdvu"]
@@ -26,10 +27,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0196019, 0, 0.0142946)
 [node name="BlasterSound" type="AudioStreamPlayer" parent="Node3D"]
 process_mode = 3
 stream = ExtResource("2_iyrat")
+volume_db = -20.0
+pitch_scale = 2.0
 
 [node name="EnemyHitSound" type="AudioStreamPlayer" parent="Node3D"]
 process_mode = 3
 stream = ExtResource("3_0si81")
+
+[node name="PowerUpSound" type="AudioStreamPlayer" parent="Node3D"]
+stream = ExtResource("4_t0qab")
 
 [node name="ThirdPersonCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 18.118)

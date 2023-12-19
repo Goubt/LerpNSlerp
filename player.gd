@@ -1,7 +1,9 @@
 extends CharacterBody3D
 
+# Instantiate Sound Effects
 @onready var shootSound: AudioStreamPlayer = $BlasterSound
 @onready var enemyHit: AudioStreamPlayer = $EnemyHitSound
+@onready var powerUp: AudioStreamPlayer = $PowerUpSound
 
 const MAXSPEED = 30
 const ACCELERATION = 0.75
@@ -73,6 +75,7 @@ func shoot():
 		bullet.velocity = bullet.transform.basis.z * -100
 		
 func receive_power_up(type: String):
+	powerUp.play()
 	match type:
 		"RapidFire":
 			activate_rapid_fire()
