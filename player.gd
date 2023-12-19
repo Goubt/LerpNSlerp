@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-@onready var shootSound: AudioStreamPlayer = $ShootSound
-@onready var enemyHit: AudioStreamPlayer = $enemyHitSound
+@onready var shootSound: AudioStreamPlayer = $BlasterSound
+@onready var enemyHit: AudioStreamPlayer = $EnemyHitSound
 
 const MAXSPEED = 30
 const ACCELERATION = 0.75
@@ -29,6 +29,7 @@ func _physics_process(delta):
 	if Global.playerHealth == 0:
 		print("Player Dead")
 		get_tree().change_scene_to_file("res://GameOver.tscn")
+		Global.playerHealth = 5
 		
 	transform.origin.z = 0
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
