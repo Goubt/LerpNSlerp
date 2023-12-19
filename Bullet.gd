@@ -13,7 +13,7 @@ func _on_area_3d_body_entered(body):
 		main.add_child(particles)
 		particles.transform.origin = transform.origin
 		player.enemyHit.play()
-		Global.score += 1000
+		Global.score += 1050
 		
 		body.queue_free()
 		queue_free()

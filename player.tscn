@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_0w157"]
 [ext_resource type="Texture2D" uid="uid://dc6dcxi3873h8" path="res://crosshair1.png" id="3_mb61l"]
-[ext_resource type="Texture2D" uid="uid://br81ct6ckr4em" path="res://Images/SpaceImage.png" id="4_fespy"]
 [ext_resource type="Texture2D" uid="uid://byi6bd5m15rd8" path="res://pngaaa.com-910605.png" id="4_ntntp"]
+[ext_resource type="Texture2D" uid="uid://dfu0u8c26wkaf" path="res://Images/br2.png" id="4_we7mg"]
 [ext_resource type="PackedScene" uid="uid://bq5bhqfi5760b" path="res://Models/ShipModel.gltf" id="5_y2x22"]
 [ext_resource type="PackedScene" uid="uid://cird87d5tmmeg" path="res://star_particles.tscn" id="6_xny3r"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pwlvm"]
-panorama = ExtResource("4_fespy")
+panorama = ExtResource("4_we7mg")
 
 [sub_resource type="Sky" id="Sky_ad1fi"]
 sky_material = SubResource("PanoramaSkyMaterial_pwlvm")
@@ -16,16 +16,16 @@ radiance_size = 4
 
 [sub_resource type="Environment" id="Environment_cpjtf"]
 background_mode = 2
-background_energy_multiplier = 0.33
+background_energy_multiplier = 1.34
 sky = SubResource("Sky_ad1fi")
-sky_custom_fov = 83.4
-sky_rotation = Vector3(3.48787e-16, -4.69144, -0.670206)
+sky_custom_fov = 130.0
+sky_rotation = Vector3(-6.28319, 3.14159, 0)
 glow_enabled = true
 glow_bloom = 0.15
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yv6hr"]
 
-[node name="Node3D" type="CharacterBody3D" groups=["Player"]]
+[node name="Node3D2" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_0w157")
 
 [node name="Gun1" type="Node3D" parent="."]
@@ -61,16 +61,6 @@ one_shot = true
 
 [node name="PUP_Timer" type="Timer" parent="."]
 wait_time = 10.0
-one_shot = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-
-[node name="PowerUP_Progress" type="ProgressBar" parent="."]
-offset_left = 808.0
-offset_top = 1028.0
-offset_right = 1365.0
-offset_bottom = 1057.0
-show_percentage = false
 
 [node name="FirstPersonCam" type="Camera3D" parent="."]
 
@@ -78,3 +68,4 @@ show_percentage = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.9812)
 
 [connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
+
