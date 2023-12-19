@@ -37,8 +37,14 @@ func _physics_process(delta):
 		Global.playerHealth = 5
 		
 	transform.origin.z = 0
+	# keyboard input
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputVector.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
+
+	# VR joystick input
+	inputVector.x += Input.get_action_strength("FlyRight") - Input.get_action_strength("FlyLeft")
+	inputVector.y += Input.get_action_strength("FlyUp") - Input.get_action_strength("FlyDown")
+
 	inputVector = inputVector.normalized()
 	
 	velocity.x = move_toward(velocity.x, inputVector.x * MAXSPEED, ACCELERATION)
