@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.text = "Score: " + str(Global.score)
+	self.text = "Score: \n" + str(Global.score)

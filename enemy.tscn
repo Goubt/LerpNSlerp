@@ -9,7 +9,7 @@
 script = ExtResource("1_1ane7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(6, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0, 0, 0)
 shape = SubResource("BoxShape3D_b4gvg")
 
 [node name="Invader" parent="." instance=ExtResource("2_a0txn")]
