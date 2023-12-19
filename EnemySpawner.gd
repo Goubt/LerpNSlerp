@@ -11,7 +11,7 @@ var enemySpacing = Vector3(0, 0, 4)
 
 var childNodes : Array
 
-var MAX_ENEMIES = 15
+var MAX_ENEMIES = 10 + (0.5 * Global.score)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

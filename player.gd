@@ -13,8 +13,9 @@ var can_fire = true
 @onready var main = get_tree().current_scene
 var Bullet = load("res://bullet.tscn")
 
-@onready var bullet_interval = get_node("BulletInterval")
+@onready var bullet_interval : Timer = get_node("BulletInterval")
 @onready var pup_timer : Timer = get_node("PUP_Timer")
+@onready var pup_progress : ProgressBar = get_node("PowerUP_Progress")
 
 @onready var third_person_camera = get_node("/root/Main/ThirdPersonCam")
 @onready var first_person_camera = $FirstPersonCam
@@ -45,6 +46,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
+	pup_progress.value = pup_timer.time_left
 	#Restrict player to window
 	#transform.origin.x = clamp(transform.origin.x, -20, 20)
 	#transform.origin.y = clamp(transform.origin.y, -10, 10)
@@ -59,6 +61,7 @@ func _physics_process(delta):
 func _ready():
 	bullet_interval.timeout.connect(_on_timer_timeout)
 	pup_timer.timeout.connect(_on_pup_timer_timeout)
+	pup_progress.visible = false
 	
 func _on_timer_timeout():
 	can_fire = true
@@ -73,16 +76,26 @@ func shoot():
 		
 func receive_power_up(type: String):
 	match type:
+		
 		"RapidFire":
+			print("rapid fire")
 			activate_rapid_fire()
 		"Health":
 			increase_health()
 
 func activate_rapid_fire():
+	
 	# Activate the rapid fire ability
 	Global.RapidFire = true
 	# Start the timer to deactivate the power-up after some time
+	start_pup_timer()
+	
+func start_pup_timer():
+	
 	pup_timer.start()
+	pup_progress.max_value = pup_timer.wait_time
+	
+	pup_progress.visible = true
 
 func increase_health():
 	# Increase the player's health
@@ -93,7 +106,8 @@ func _on_pup_timer_timeout():
 	if Global.RapidFire:
 		Global.RapidFire = false
 		
-		
+	pup_progress.visible = false
+	
 # Reference to the cameras
 func _process(delta):
 	if Input.is_action_just_pressed("switch_camera"):
@@ -104,3 +118,4 @@ func switch_camera():
 		first_person_camera.make_current()
 	else:
 		third_person_camera.make_current()
+

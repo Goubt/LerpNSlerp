@@ -60,5 +60,17 @@ one_shot = true
 
 [node name="PUP_Timer" type="Timer" parent="."]
 wait_time = 10.0
+one_shot = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="PowerUP_Progress" type="ProgressBar" parent="."]
+offset_left = 808.0
+offset_top = 1028.0
+offset_right = 1365.0
+offset_bottom = 1057.0
+show_percentage = false
+
+[connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
 
 [node name="FirstPersonCam" type="Camera3D" parent="."]
