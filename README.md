@@ -13,14 +13,23 @@ Video:
 # Description of the project
 Growing up, each member of our group had a profound love of retro videogames such as Space Invaders, Galaga, and Centepede.
 We drew heavy inspiration from these space style shooters to help create Metaverse Vanguard, a 3D space shooter set in
-the distant future and the far outreach of the galaxy where the player will take on the role of the defender of the metaverse where they will pilot the D-Wing
+the distant future and above the planet Deehmtee where the player will take on the role of the defender of the metaverse where they will pilot the D-Wing
 starfighter to protect the metaverse and all metaversians from the threat of the oncoming invaders. The player controls their ship and
 uses the latest galactic blasters with the help of mysterious space powerups to battle the oncoming invaders in a tense mission where all it at stake
 
 # Instructions for use
 
+- Connect a VR Headset for a Virtual Reality Experience
+- Press F5 at any time to change camera perspective when in PC Mode
+- Use Arrow Keys to Control your Ship
+- Press Space to Fire
+
 
 # How it works
+The player controls a ship flying above the surface of the planet Deehmtee, facing the threat of alien invaders. The invaders are slowly heading towards the player oscelating from side to side. 
+You the player must fend off these invaders using the weapons on your ship whilst collecting power-ups to resore health and increase the effectiveness of your weapons.
+The game ends when the player's health reaches zero by letting too many invaders slip past.
+Are you up for the task?
 
 # List of classes/assets in the project
 
