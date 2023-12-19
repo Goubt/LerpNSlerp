@@ -17,6 +17,9 @@ var Bullet = load("res://bullet.tscn")
 @onready var pup_timer : Timer = get_node("PUP_Timer")
 @onready var pup_progress : ProgressBar = get_node("PowerUP_Progress")
 
+@onready var third_person_camera = get_node("/root/Main/ThirdPersonCam")
+@onready var first_person_camera = $FirstPersonCam
+
 var power : String
 var powerList : Array = ["RapidFire", "Health"]
 const HEALTH_POWERUP_AMOUNT = 25  # The amount of health to restore
@@ -25,7 +28,7 @@ const MAX_HEALTH = 100  # Maximum health
 func _physics_process(delta):
 	
 	if Global.playerHealth == 0:
-		print("Dead")
+		print("Player Dead")
 		get_tree().change_scene_to_file("res://GameOver.tscn")
 		
 	transform.origin.z = 0
@@ -104,3 +107,15 @@ func _on_pup_timer_timeout():
 		Global.RapidFire = false
 		
 	pup_progress.visible = false
+	
+# Reference to the cameras
+func _process(delta):
+	if Input.is_action_just_pressed("switch_camera"):
+		switch_camera()
+
+func switch_camera():
+	if third_person_camera.is_current():
+		first_person_camera.make_current()
+	else:
+		third_person_camera.make_current()
+

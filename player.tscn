@@ -72,3 +72,5 @@ offset_bottom = 1057.0
 show_percentage = false
 
 [connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
+
+[node name="FirstPersonCam" type="Camera3D" parent="."]
