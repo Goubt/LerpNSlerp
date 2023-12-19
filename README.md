@@ -24,38 +24,38 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 
 # List of classes/assets in the project
 
-| Class/asset                | Source       |
-|----------------------------|--------------|
-| Invader.gd                 | Self written |
-| Bullet.gd                  | Self written |
-| bullet.tscn                | Self written |
-| Enemy.gd                   | Self written |
-| enemy.tscn                 | Self written |
-| EnemySpawner.gd            | Self written |
-| enemy_spawner.tscn         | Self written |
-| ExplosionParticle.tscn     | Self written |
-| GameOver.gd                | Self written |
-| GameOver.tscn              | Self written |
-| Global.gd                  | Self written |
-| Health.gd                  | Self written |
-| main.gd                    | Self written |
-| main.tscn                  | Self written |
-| menu.gd                    | Self written |
-| menu.tscn                  | Self written |
-| Message.gd                 | Self written |
-| player.gd                  | Self written |
-| player.tscn                | Self written |
-| power_up.gd                | Self written |
-| power_up.tscn              | Self written |
-| power_up_health.tscn       | Self written |
-| power_up_rapid_fire.tscn   | Self written |
-| PowerUpSpawner.gd          | Self written |
-| power_up_spawner.tscn      | Self written |
-| ProgressBar.tscn           | Self written |
-| Score.gd                   | Self written |
-| SpaceParticles.tscn        | Self written |
-| star_particle.tscn         | Self written |
-| ThirdPersonCamera.gd       | Self written |
+| Class/asset                | Source    	     |
+|----------------------------|----------------------|
+| Invader.gd                 | Collaborative Effort |
+| Bullet.gd                  | Collaborative Effort |
+| bullet.tscn                | Collaborative Effort |
+| Enemy.gd                   | Collaborative Effort |
+| enemy.tscn                 | Collaborative Effort |
+| EnemySpawner.gd            | Collaborative Effort |
+| enemy_spawner.tscn         | Collaborative Effort |
+| ExplosionParticle.tscn     | Collaborative Effort |
+| GameOver.gd                | Collaborative Effort |
+| GameOver.tscn              | Collaborative Effort |
+| Global.gd                  | Collaborative Effort |
+| Health.gd                  | Collaborative Effort |
+| main.gd                    | Collaborative Effort |
+| main.tscn                  | Collaborative Effort |
+| menu.gd                    | Collaborative Effort |
+| menu.tscn                  | Collaborative Effort |
+| Message.gd                 | Collaborative Effort |
+| player.gd                  | Collaborative Effort |
+| player.tscn                | Collaborative Effort |
+| power_up.gd                | Collaborative Effort |
+| power_up.tscn              | Collaborative Effort |
+| power_up_health.tscn       | Collaborative Effort |
+| power_up_rapid_fire.tscn   | Collaborative Effort |
+| PowerUpSpawner.gd          | Collaborative Effort |
+| power_up_spawner.tscn      | Collaborative Effort |
+| ProgressBar.tscn           | Collaborative Effort |
+| Score.gd                   | Collaborative Effort |
+| SpaceParticles.tscn        | Collaborative Effort |
+| star_particle.tscn         | Collaborative Effort |
+| ThirdPersonCamera.gd       | Collaborative Effort |
 
 
 # List of Images used in the project
