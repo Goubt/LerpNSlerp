@@ -32,6 +32,7 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 
 # List of Images used in the project
 | Image | Use Case | Source |
+|-----------|-----------|-----------|
 | br.png | BackGround | AI Generated |
 | GameOver.png | Game Over Screen | AI Generated |
 | SpaceImage.png | Alternative Background | AI Generated |
@@ -39,6 +40,7 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 
 # List of Models used in the project
 | Models | Use Case | Source |
+|-----------|-----------|-----------|
 | ShipModel.gltf | Model used for the space ship | Self-Made |
 | Invader.gltf | Model for the Alien | From [https://free3d.com/3d-model/space-invader-26504.html] |
 | InvaderAlt.gltf | Potentional for animated Alien | Modifier from [https://free3d.com/3d-model/space-invader-26504.html] |
