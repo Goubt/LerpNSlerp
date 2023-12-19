@@ -73,6 +73,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.925025, 0)
 [node name="StarParticles" parent="." instance=ExtResource("6_xny3r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.9812)
 
-
 [connection signal="timeout" from="PUP_Timer" to="." method="_on_pup_timer_timeout"]
-

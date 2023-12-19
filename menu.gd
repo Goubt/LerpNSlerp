@@ -5,10 +5,10 @@ var interface : XRInterface
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/StartButton.grab_focus()
-	interface = XRServer.find_interface("OpenXR")
-	if interface:
-		print(" Vr is on")
-		get_viewport().use_xr = true
+	#interface = XRServer.find_interface("OpenXR")
+	#if interface:
+	#	print(" Vr is on")
+	#	get_viewport().use_xr = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

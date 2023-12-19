@@ -13,6 +13,4 @@ transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_b4gvg")
 
 [node name="Invader" parent="." instance=ExtResource("2_a0txn")]
-
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, -2, 0)
-
