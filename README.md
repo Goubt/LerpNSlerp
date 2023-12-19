@@ -37,6 +37,7 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 | GameOver.png | Game Over Screen | AI Generated |
 | SpaceImage.png | Alternative Background | AI Generated |
 | TitleScreen.png | Title Screen Image | AI Generated |
+| ShipModel | Control Panel mapping | https://images-assets.nasa.gov/image/KSC-99pp0441/KSC-99pp0441~orig.jpg |
 
 # List of Models used in the project
 | Models | Use Case | Source |
@@ -52,7 +53,8 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 * Item 2
 
 # What I am most proud of in the assignment
-
+Aleksey:
+Learning how to use blender, learning how to properly use modifiers and 
 # What I learned
 
 # Proposal submitted earlier can go here:
