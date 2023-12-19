@@ -24,7 +24,7 @@ const MAX_HEALTH = 100  # Maximum health
 func _physics_process(delta):
 	
 	if Global.playerHealth == 0:
-		print("Dead")
+		print("Player Dead")
 		get_tree().change_scene_to_file("res://GameOver.tscn")
 		
 	transform.origin.z = 0
