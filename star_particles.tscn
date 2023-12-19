@@ -10,7 +10,9 @@ direction = Vector3(0, 1, 0)
 spread = 0.0
 gravity = Vector3(0, 0, 0)
 initial_velocity_min = 150.0
-initial_velocity_max = 150.0
+initial_velocity_max = 200.0
+angular_velocity_min = -720.0
+angular_velocity_max = 38.92
 angle_max = 467.0
 hue_variation_max = 1.0
 
@@ -19,6 +21,7 @@ radius = 0.02
 height = 10.0
 
 [node name="StarParticles" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.673013, 0.739631, 0, -0.739631, 0.673013, 0, 0, 0)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.17712, 0.0652962, -1.20266)

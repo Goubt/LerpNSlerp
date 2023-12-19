@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var powerUp: AudioStreamPlayer = $PowerUpSound
+
 var spd = 25
 #var spd = randf_range(20,50)
 var amplitude = 5  # Adjust as needed
@@ -25,4 +27,5 @@ func _physics_process(_delta):
 func _on_PowerUp_body_entered(body: Node):
 	if body.is_in_group("Player"):
 		body.receive_power_up("Health")
+		powerUp.play()
 		queue_free()  # Remove the power-up after it's picked up
