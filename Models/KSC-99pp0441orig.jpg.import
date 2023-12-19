@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtm0vbufc3pa"
 path.s3tc="res://.godot/imported/KSC-99pp0441orig.jpg-a3ace2ece6e7063d8f2aa7140a4d8a6f.s3tc.ctex"
+path.etc2="res://.godot/imported/KSC-99pp0441orig.jpg-a3ace2ece6e7063d8f2aa7140a4d8a6f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/KSC-99pp0441orig.jpg"
-dest_files=["res://.godot/imported/KSC-99pp0441orig.jpg-a3ace2ece6e7063d8f2aa7140a4d8a6f.s3tc.ctex"]
+dest_files=["res://.godot/imported/KSC-99pp0441orig.jpg-a3ace2ece6e7063d8f2aa7140a4d8a6f.s3tc.ctex", "res://.godot/imported/KSC-99pp0441orig.jpg-a3ace2ece6e7063d8f2aa7140a4d8a6f.etc2.ctex"]
 
 [params]
 
