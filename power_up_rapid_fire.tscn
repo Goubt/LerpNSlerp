@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://buo1uhxlhg74d"]
+[gd_scene load_steps=4 format=3 uid="uid://c33avfp743x3d"]
 
 [ext_resource type="Script" path="res://power_up_rapid_fire.gd" id="1_fj2fh"]
-[ext_resource type="PackedScene" path="res://Models/PowerUpRapidFire.gltf" id="2_dabfk"]
+[ext_resource type="PackedScene" uid="uid://dgikk4smc6erj" path="res://Models/PowerUpRapidFire.gltf" id="2_dabfk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_maemv"]
 
