@@ -74,7 +74,7 @@ uses the latest galactic blasters with the help of mysterious space powerups to 
 |-----------|-----------|-----------|
 | ShipModel.gltf | Model used for the space ship | Self-Made |
 | Invader.gltf | Model for the Alien | From [https://free3d.com/3d-model/space-invader-26504.html] |
-| InvaderAlt.gltf | Potentional for animated Alien | Modifier from [https://free3d.com/3d-model/space-invader-26504.html] |
+| InvaderAlt.gltf | Potentional for animated Alien | Modified from [https://free3d.com/3d-model/space-invader-26504.html] |
 | PowerUpHealth.gltf | Model for the Health Power Up | Self-Made |
 | PowerUpRapidFire.gltf | Model for the Rapid Fire Power Up | Self-Made |
 
