@@ -8,7 +8,9 @@ Class Group: Lerpin N Slerpin
 
 Video:
 
-[![YouTube]]([[https://youtu.be/bYWgDsIFTCw]])
+
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://youtu.be/bYWgDsIFTCw)
+
 
 # Description of the project
 Growing up, each member of our group had a profound love of retro videogames such as Space Invaders, Galaga, and Centepede.
