@@ -110,6 +110,9 @@ I am most proud of the mechanics of the Starship and Enemy movement as I feel th
 Learning the intricacies of game development, how different scenes and nodes interact with one another and the complexities that come along with creating a game that runs efficiently and is fun to play
 
 *Finn*
+Working on game logic with trying to tie it all together with the nessary scenes and different node types was where most of the enjoyment came for me personally. 
+Another thing I enjoyed working on was the two particle effect scenes, which provided a lot of detail to the overall game. They were simple to code but most of the work on them came from manipulating the particle nodes within the scene through the Godot inspector. The different processing techniques gave a satisfying effect to the end  particles. It gave me good experience with game engine features that I didnt necessarily understand before.
+
 
 ## This is how to markdown text:
 
