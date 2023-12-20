@@ -2,7 +2,8 @@
 
 Name: Jamie Heffernan, Aleksey Makarevich, Finn Maguire
 
-Student Number: C20483462, C20402732
+Student Number: C20483462, C20402732, C20492576
+
 Class Group: Lerpin N Slerpin
 
 Video:
