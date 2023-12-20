@@ -93,10 +93,10 @@ Are you up for the task?
 * Item 2
 
 # References
-Space Invaders - Inspiration for game mechanics.
-Galaga - Inspiration for enemy designs.
-Centipede - Inspiration for power-up system.
-StarFox - Inspiration for game perspective and style
+* Space Invaders - Inspiration for game mechanics.
+* Galaga - Inspiration for enemy designs.
+* Centipede - Inspiration for power-up system.
+* StarFox - Inspiration for game perspective and style
 
 # What I am most proud of in the assignment
 
@@ -106,78 +106,13 @@ What I learned
 "This project allowed mt to learn the basics of games design and go through the process of creating models to be used. Learning how to use blender would help me with my final year project, as it is to create 3D models."
 
 *Jamie:*
-I am most proud of the mechanics of the Starship and Enemy movement as I feel they have a modern yet also retro feel and control to them. Not too clunky but not too floaty either
+I am most proud of the mechanics of the Starship and Enemy movement as I feel they have a modern yet also retro feel and control to them. Not too clunky but not too floaty either.
 Learning the intricacies of game development, how different scenes and nodes interact with one another and the complexities that come along with creating a game that runs efficiently and is fun to play
 
 *Finn*
 Working on game logic with trying to tie it all together with the nessary scenes and different node types was where most of the enjoyment came for me personally. 
 Another thing I enjoyed working on was the two particle effect scenes, which provided a lot of detail to the overall game. They were simple to code but most of the work on them came from manipulating the particle nodes within the scene through the Godot inspector. The different processing techniques gave a satisfying effect to the end  particles. It gave me good experience with game engine features that I didnt necessarily understand before.
 
-
-## This is how to markdown text:
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
 This is a youtube video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
