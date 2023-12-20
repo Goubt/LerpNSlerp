@@ -89,10 +89,6 @@ Are you up for the task?
 | PowerUpRapidFire.gltf | Model for the Rapid Fire Power Up | Self-Made |
 
 # References
-* Item 1
-* Item 2
-
-# References
 * Space Invaders - Inspiration for game mechanics.
 * Galaga - Inspiration for enemy designs.
 * Centipede - Inspiration for power-up system.
